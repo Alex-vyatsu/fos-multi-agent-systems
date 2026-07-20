@@ -1,0 +1,96 @@
+.
+├── Exam/
+│   ├── attachments/
+│   │   └── .gitkeep
+│   └── README.md
+├── M1-agent-architectures/
+│   ├── attachments/
+│   │   └── .gitkeep
+│   ├── README.md
+│   ├── kim-01-practical-work.md
+│   └── rubric-01.md
+├── M2-coordination/
+│   ├── attachments/
+│   │   └── .gitkeep
+│   ├── README.md
+│   ├── kim-01-practical-work.md
+│   └── rubric-01.md
+├── M3-game-theory/
+│   ├── attachments/
+│   │   └── .gitkeep
+│   ├── README.md
+│   ├── kim-01-practical-work.md
+│   └── rubric-01.md
+├── M4-swarm-intelligence/
+│   ├── attachments/
+│   │   └── .gitkeep
+│   ├── README.md
+│   ├── kim-01-practical-work.md
+│   └── rubric-01.md
+├── M5-marl/
+│   ├── attachments/
+│   │   └── .gitkeep
+│   ├── README.md
+│   ├── kim-01-practical-work.md
+│   └── rubric-01.md
+├── M6-llm-mas/
+│   ├── attachments/
+│   │   └── .gitkeep
+│   ├── README.md
+│   ├── kim-01-practical-work.md
+│   └── rubric-01.md
+├── Midterm-1/
+│   ├── attachments/
+│   │   └── .gitkeep
+│   └── README.md
+├── Midterm-2/
+│   ├── attachments/
+│   │   └── .gitkeep
+│   └── README.md
+├── data/
+│   ├── README.md
+│   └── krm-v3.0.xlsx
+├── docs/
+│   ├── README.md
+│   ├── quality-checklist.md
+│   └── rpd.md
+├── methodical-guidelines/
+│   ├── students/
+│   │   └── README.md
+│   ├── teachers-assessment/
+│   │   └── README.md
+│   ├── teachers-resources/
+│   │   └── README.md
+│   └── README.md
+├── other/
+│   └── README.md
+├── resources/
+│   ├── benchmarks/
+│   │   └── README.md
+│   ├── datasets/
+│   │   └── README.md
+│   ├── llm-prompts/
+│   │   └── README.md
+│   ├── other/
+│   │   └── README.md
+│   ├── papers/
+│   │   └── README.md
+│   ├── problem-banks/
+│   │   └── README.md
+│   ├── software/
+│   │   └── python-libs/
+│   │       └── README.md
+│   ├── test-banks/
+│   │   └── README.md
+│   ├── textbooks/
+│   │   └── README.md
+│   └── README.md
+├── team/
+│   ├── images/
+│   │   └── .gitkeep
+│   └── README.md
+├── .gitignore
+├── CONTRIBUTING.md
+├── LICENSE.md
+├── README.md
+└── repository-tree.txt
