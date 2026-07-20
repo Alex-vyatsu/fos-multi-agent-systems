@@ -17,7 +17,10 @@
 │   │   └── .gitkeep
 │   ├── README.md
 │   ├── kim-01-practical-work.md
-│   └── rubric-01.md
+│   ├── kim-02-test.md
+│   ├── kim-03-case.md
+│   ├── rubric-01.md
+│   └── rubric-03.md
 ├── M3-game-theory/
 │   ├── attachments/
 │   │   └── .gitkeep
