@@ -26,6 +26,7 @@
 │   │   └── .gitkeep
 │   ├── README.md
 │   ├── kim-01-practical-work.md
+│   ├── kim-02-test.md
 │   └── rubric-01.md
 ├── M4-swarm-intelligence/
 │   ├── attachments/
