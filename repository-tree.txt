@@ -49,7 +49,9 @@
 │   └── README.md
 ├── data/
 │   ├── README.md
-│   └── krm-v3.0.xlsx
+│   ├── competency-catalog.csv
+│   ├── krm-v3.0.xlsx
+│   └── role-competency-matrix.csv
 ├── docs/
 │   ├── README.md
 │   ├── quality-checklist.md
