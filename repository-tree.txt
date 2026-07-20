@@ -42,7 +42,10 @@
 │   │   └── .gitkeep
 │   ├── README.md
 │   ├── kim-01-practical-work.md
-│   └── rubric-01.md
+│   ├── kim-02-test.md
+│   ├── kim-03-research-note.md
+│   ├── rubric-01.md
+│   └── rubric-03.md
 ├── M6-llm-mas/
 │   ├── attachments/
 │   │   └── .gitkeep
