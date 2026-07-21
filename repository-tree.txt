@@ -94,6 +94,9 @@
 │   │   └── README.md
 │   └── README.md
 ├── other/
+│   ├── tools/
+│   │   ├── check_links.py
+│   │   └── check_weights.py
 │   └── README.md
 ├── resources/
 │   ├── benchmarks/
