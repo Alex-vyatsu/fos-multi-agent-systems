@@ -2,7 +2,12 @@
 ├── Exam/
 │   ├── attachments/
 │   │   └── .gitkeep
-│   └── README.md
+│   ├── README.md
+│   ├── acceptance-checklist.md
+│   ├── kim-01-theory.md
+│   ├── kim-02-practical-task.md
+│   ├── rubric-01.md
+│   └── rubric-02.md
 ├── M1-agent-architectures/
 │   ├── attachments/
 │   │   └── .gitkeep
