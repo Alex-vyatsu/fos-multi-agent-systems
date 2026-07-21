@@ -58,11 +58,19 @@
 ├── Midterm-1/
 │   ├── attachments/
 │   │   └── .gitkeep
-│   └── README.md
+│   ├── README.md
+│   ├── kim-01-control-work.md
+│   ├── kim-02-analytical-case.md
+│   ├── rubric-01.md
+│   └── rubric-02.md
 ├── Midterm-2/
 │   ├── attachments/
 │   │   └── .gitkeep
-│   └── README.md
+│   ├── README.md
+│   ├── kim-01-control-work.md
+│   ├── kim-02-analytical-case.md
+│   ├── rubric-01.md
+│   └── rubric-02.md
 ├── data/
 │   ├── README.md
 │   ├── competency-catalog.csv
