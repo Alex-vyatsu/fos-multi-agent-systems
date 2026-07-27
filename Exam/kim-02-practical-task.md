@@ -28,15 +28,20 @@
 ### Минимальный сквозной smoke
 
 ```bash
-python examples/exam_end_to_end.py --seed 42
-python examples/exam_end_to_end.py --seed 42 --inject-tool-failure
+python examples/m6_protocol_slice.py --compare-patterns
+python examples/exam_end_to_end.py --seed 42 --pattern reviewed_pipeline
+python examples/exam_end_to_end.py --seed 42 --pattern reviewed_pipeline --inject-tool-failure
+python examples/defense_experiment.py
 ```
 
-Обе команды должны завершиться с `passed = true`. Во втором запуске исходный
-tool path имеет `protocol_state = failed`, затем явно выполняется безопасное
-восстановление до `recovery_state = completed`. Smoke проверяет данные,
-распределение задач, наблюдаемость и recovery, но не заменяет индивидуальный
-проект, три запуска каждой конфигурации и живую защиту.
+Оба запуска `exam_end_to_end.py` должны завершиться с `passed = true`. В
+отказном запуске исходный tool path имеет `protocol_state = failed`, затем явно
+выполняется безопасное восстановление до `recovery_state = completed`. Smoke проверяет данные,
+распределение задач, коррелированный trace, стоимость, latency budget и
+recovery. `defense_experiment.py` выполняет два паттерна на seeds 7/42/99,
+масштаб 4/8/12 задач и локальное изменение доступности инструмента. Комплект
+доказательств приведён в [`evidence/`](../evidence/README.md), но он не заменяет
+индивидуальный проект и живую защиту.
 
 ## 3. Углублённый контур (по варианту)
 

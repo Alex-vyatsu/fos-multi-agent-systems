@@ -11,6 +11,7 @@ COMMANDS = [
     [sys.executable, "other/tools/check_weights.py"],
     [sys.executable, "other/tools/check_traceability.py"],
     [sys.executable, "other/tools/check_structure.py"],
+    [sys.executable, "other/tools/check_evidence.py"],
     [sys.executable, "-m", "unittest", "discover", "-s", "tests", "-v"],
 ]
 
