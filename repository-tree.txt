@@ -90,6 +90,7 @@
 │   ├── clean-run-2026-07-27.md
 │   ├── evaluation-2026-07-27.md
 │   ├── indicator-evidence.md
+│   ├── itmo-defense-evaluation-2026-07-27.md
 │   ├── README.md
 │   ├── quality-checklist.md
 │   ├── resource-profiles.md

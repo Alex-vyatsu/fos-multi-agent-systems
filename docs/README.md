@@ -7,6 +7,7 @@
 | [rpd.md](rpd.md)                                 | рабочая программа дисциплины                 |
 | [quality-checklist.md](quality-checklist.md)     | проверка готовности репозитория к публикации |
 | [evaluation-2026-07-27.md](evaluation-2026-07-27.md) | оценка репозитория по 21 критерию |
+| [itmo-defense-evaluation-2026-07-27.md](itmo-defense-evaluation-2026-07-27.md) | оценка готовности репозитория к защите по критериям ИТМО |
 | [indicator-evidence.md](indicator-evidence.md) | читаемая атомарная трассировка индикаторов и доказательств |
 | [resource-profiles.md](resource-profiles.md) | минимальный, рекомендуемый и расширенный профили ресурсов |
 | [clean-run-2026-07-27.md](clean-run-2026-07-27.md) | протокол чистого запуска минимального профиля |

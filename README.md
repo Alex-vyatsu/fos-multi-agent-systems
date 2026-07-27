@@ -18,6 +18,7 @@
 - [Шаблон учебного репозитория](templates/student-repository/README.md)
 - [Роли сопровождения и release gate](team/ownership.md)
 - [Оценка репозитория по чек-листу](docs/evaluation-2026-07-27.md)
+- [Оценка готовности к защите по критериям ИТМО](docs/itmo-defense-evaluation-2026-07-27.md)
 
 ## 1. О дисциплине
 
