@@ -27,7 +27,7 @@ REQUIRED_FILES = [
     "docs/indicator-evidence.md",
     "docs/resource-profiles.md",
     "docs/clean-run-2026-07-27.md",
-    "docs/dpf-audit-2026-07-27.md",
+    "docs/evaluation-2026-07-27.md",
     "resources/datasets/generate_requests.py",
     "resources/datasets/generated/requests_seed42.csv",
     "templates/student-repository/README.md",

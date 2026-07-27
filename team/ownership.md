@@ -11,7 +11,7 @@
 | `FOS_MAINTAINER` | принимает состав релиза, ведёт changelog, координирует замечания | release note и успешный `check_all.py` | не назначен — blocker тиражирования | решение команды и кафедры |
 | `MEASUREMENT_OWNER` | подтверждает связь КРМ → индикатор → КИМ → рубрика | [`indicator-evidence.csv`](../data/indicator-evidence.csv) и проверка трассировки | не назначен; автоматическая проверка действует, содержательное решение pending | владелец РПД/КРМ |
 | `REPRODUCIBILITY_OWNER` | квалифицирует окружение и clean run, закрывает ручные шаги | [протокол clean run](../docs/clean-run-2026-07-27.md) | не назначен; минимальный профиль проверен технически | руководитель реализации дисциплины |
-| `TECHNICAL_STANDARDS_OWNER` | фиксирует baseline A2A/MCP и migration window | source record, contract tests, refresh note | не назначен; baseline закреплён в DPF | профильный преподаватель/архитектор |
+| `TECHNICAL_STANDARDS_OWNER` | фиксирует baseline A2A/MCP и migration window | спецификации, contract tests, запись об обновлении | не назначен; baseline указан в [ресурсах модуля 6](../resources/llm-prompts/README.md) | профильный преподаватель/архитектор |
 | `RESOURCE_OWNER` | проверяет URL, версии, доступ и fallback | [`resource-manifest.csv`](../data/resource-manifest.csv), датированный link report | не назначен; локальные ресурсы проверены, внешние URL pending | ответственный преподаватель |
 | `LEGAL_APPROVER` | подтверждает лицензионный и организационный статус | подписанная/утверждённая статусная запись | внешнее решение не получено | юридическая служба/кафедра |
 

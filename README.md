@@ -17,9 +17,7 @@
 - [Профили ресурсов](docs/resource-profiles.md)
 - [Шаблон учебного репозитория](templates/student-repository/README.md)
 - [Роли сопровождения и release gate](team/ownership.md)
-- [Отчёт об итерации улучшения](docs/improvement-iteration-2026-07.md)
-- [DPF-аудит: критерий → evidence → статус → ремонт](docs/dpf-audit-2026-07-27.md)
-- [Рамки проектирования и воспроизводимости](docs/dpf/README.md)
+- [Оценка репозитория по чек-листу](docs/evaluation-2026-07-27.md)
 
 ## 1. О дисциплине
 
