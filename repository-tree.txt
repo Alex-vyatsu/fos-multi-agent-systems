@@ -1,4 +1,7 @@
 .
+├── .github/
+│   └── workflows/
+│       └── quality.yml
 ├── Exam/
 │   ├── attachments/
 │   │   └── .gitkeep
@@ -79,12 +82,42 @@
 ├── data/
 │   ├── README.md
 │   ├── competency-catalog.csv
+│   ├── indicator-evidence.csv
 │   ├── krm-v3.0.xlsx
+│   ├── resource-manifest.csv
 │   └── role-competency-matrix.csv
 ├── docs/
+│   ├── dpf/
+│   │   ├── DPF-PACKAGE-EVALUATION-0.2.0.md
+│   │   ├── DPF-REFRESH-PLAN.md
+│   │   ├── DPF-RELATION-RECORDS.md
+│   │   ├── FOS-CONFORMANCE-PROFILES.md
+│   │   ├── FOS-IMPLEMENTATION-BACKLOG.md
+│   │   ├── FOS-MULTI-AGENT-SYSTEMS-PRINCIPLES-FRAMEWORK.md
+│   │   ├── FOS-MULTI-AGENT-SYSTEMS-SOURCE-PACK.md
+│   │   ├── MULTI-AGENT-SYSTEMS-GLOSSARY.md
+│   │   ├── MULTI-AGENT-SYSTEMS-PRINCIPLES-FRAMEWORK.md
+│   │   ├── MULTI-AGENT-SYSTEMS-SOURCE-PACK.md
+│   │   └── README.md
+│   ├── clean-run-2026-07-27.md
+│   ├── dpf-audit-2026-07-27.md
+│   ├── indicator-evidence.md
 │   ├── README.md
+│   ├── improvement-iteration-2026-07.md
 │   ├── quality-checklist.md
+│   ├── resource-profiles.md
 │   └── rpd.md
+├── examples/
+│   ├── README.md
+│   ├── __init__.py
+│   ├── exam_end_to_end.py
+│   ├── m1_reactive_agents.py
+│   ├── m2_contract_net.py
+│   ├── m3_coordination_game.py
+│   ├── m4_pso.py
+│   ├── m5_independent_q.py
+│   ├── m6_guarded_orchestrator.py
+│   └── m6_protocol_slice.py
 ├── methodical-guidelines/
 │   ├── students/
 │   │   └── README.md
@@ -95,14 +128,20 @@
 │   └── README.md
 ├── other/
 │   ├── tools/
+│   │   ├── check_all.py
 │   │   ├── check_links.py
+│   │   ├── check_structure.py
+│   │   ├── check_traceability.py
 │   │   └── check_weights.py
 │   └── README.md
 ├── resources/
 │   ├── benchmarks/
 │   │   └── README.md
 │   ├── datasets/
-│   │   └── README.md
+│   │   ├── generated/
+│   │   │   └── requests_seed42.csv
+│   │   ├── README.md
+│   │   └── generate_requests.py
 │   ├── llm-prompts/
 │   │   └── README.md
 │   ├── other/
@@ -122,9 +161,24 @@
 ├── team/
 │   ├── images/
 │   │   └── .gitkeep
-│   └── README.md
+│   ├── README.md
+│   └── ownership.md
+├── templates/
+│   └── student-repository/
+│       ├── README.md
+│       ├── ai-use-disclosure.md
+│       ├── architecture-decision.md
+│       ├── experiment-log.csv
+│       └── report.md
+├── tests/
+│   ├── __init__.py
+│   └── test_examples.py
 ├── .gitignore
 ├── CONTRIBUTING.md
+├── Dockerfile
+├── LICENSE-CODE.md
 ├── LICENSE.md
 ├── README.md
+├── pyproject.toml
+├── requirements.txt
 └── repository-tree.txt

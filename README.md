@@ -12,6 +12,14 @@
 - [Команда проекта](team/README.md)
 - [Контроль качества репозитория](docs/quality-checklist.md)
 - [Исходные данные КРМ](data/README.md)
+- [Атомарная трассировка индикаторов](docs/indicator-evidence.md)
+- [Минимальные воспроизводимые примеры](examples/README.md)
+- [Профили ресурсов](docs/resource-profiles.md)
+- [Шаблон учебного репозитория](templates/student-repository/README.md)
+- [Роли сопровождения и release gate](team/ownership.md)
+- [Отчёт об итерации улучшения](docs/improvement-iteration-2026-07.md)
+- [DPF-аудит: критерий → evidence → статус → ремонт](docs/dpf-audit-2026-07-27.md)
+- [Рамки проектирования и воспроизводимости](docs/dpf/README.md)
 
 ## 1. О дисциплине
 
@@ -48,17 +56,33 @@
 
 | № | Модуль / элемент | Компетенция | Индикатор | Уровень | Дескриптор освоения (кратко) | Форма контроля | КИМ | Ресурсы |
 |:--:|---|:--:|---|:--:|---|:--:|---|---|
-| 1 | Модуль 1. Архитектуры агентов и МАС | O-2 | O-2.1 | Б→С | Обосновывает применение МАС, выбирает архитектуру, ведёт паспорт решения | Т, Р | [M1](M1-agent-architectures/README.md) | [resources](resources/README.md) |
-| 2 | Модуль 2. Координация и коллективное принятие решений | O-2 | O-2.2, O-2.3 | Б | Реализует распределение задач (Contract Net, аукционы), координацию обученных агентов | Т, Р | [M2](M2-coordination/README.md) | [resources](resources/README.md) |
-| 3 | Модуль 3. Теория игр и стратегическое взаимодействие | O-2 | O-2.1, O-2.4 | С | Анализирует равновесия и стратегическое взаимодействие; оценивает результативность | Т, Р | [M3](M3-game-theory/README.md) | [resources](resources/README.md) |
-| 4 | Модуль 4. Роевой интеллект и метаэвристики | O-2 | O-2.2, O-2.4 | С | Применяет PSO/ACO, строит метрики самоорганизации и сравнивает с аналогами | Т, Р | [M4](M4-swarm-intelligence/README.md) | [resources](resources/README.md) |
-| 5 | Модуль 5. Мультиагентное обучение с подкреплением (MARL) | ML-6, FC-3 | ML-6.1, ML-6.3, FC-3.3 | С | Обучает кооперативных/конкурентных агентов (IQL, CTDE, QMIX, MADDPG); оценивает устойчивость и безопасность | Т, Р, П | [M5](M5-marl/README.md) | [resources](resources/README.md) |
-| 6 | Модуль 6. Мультиагентные системы на основе LLM | LLM-4, FC-3 | LLM-4.1, LLM-4.3, FC-3.3 | Б | Строит систему «оркестратор + агенты» (A2A, MCP), применяет паттерны, разделяет контуры ответственности | Т, П | [M6](M6-llm-mas/README.md) | [resources](resources/README.md) |
-| 7 | Рубежный контроль 1 (модули 1–3) | O-2 | O-2.1–O-2.4 | С | Обоснование выбора МАС в аналитическом кейсе; контрольная/коллоквиум | Р | [Midterm-1](Midterm-1/README.md) | [resources](resources/README.md) |
-| 8 | Рубежный контроль 2 (модули 4–5) | O-2, ML-6 | O-2.2, O-2.4, ML-6.1, ML-6.3 | С | Кейс по метаэвристикам и MARL; контрольная/коллоквиум | Р | [Midterm-2](Midterm-2/README.md) | [resources](resources/README.md) |
-| 9 | Промежуточная аттестация — экзамен | O-2, ML-6, LLM-4, FC-3 | все | целевые | Теория (билеты) + комплексное практическое задание с живой защитой | П | [Exam](Exam/README.md) | [resources](resources/README.md) |
+| 1.1 | Модуль 1. Архитектуры агентов и МАС | O-2 | O-2.1 | Б | Обосновывает применение МАС, выбирает архитектуру, ведёт паспорт решения | Т | [КИМ-1.1](M1-agent-architectures/kim-01-practical-work.md), [КИМ-1.2](M1-agent-architectures/kim-02-test.md), [КИМ-1.3](M1-agent-architectures/kim-03-case.md) | [пример](examples/m1_reactive_agents.py), [шаблон паспорта](templates/student-repository/architecture-decision.md) |
+| 2.1 | Модуль 2. Координация | O-2 | O-2.2 | Б | Реализует распределение задач и сравнивает способы координации | Т | [КИМ-2.1](M2-coordination/kim-01-practical-work.md), [КИМ-2.2](M2-coordination/kim-02-test.md), [КИМ-2.3](M2-coordination/kim-03-case.md) | [Contract Net](examples/m2_contract_net.py), [генератор заявок](resources/datasets/generate_requests.py) |
+| 2.2 | Модуль 2. Координация | O-2 | O-2.3 | Б | Координирует обученных агентов и объясняет границы выбранного механизма | Т | [КИМ-2.1](M2-coordination/kim-01-practical-work.md), [КИМ-2.2](M2-coordination/kim-02-test.md) | [пример](examples/m2_contract_net.py), [данные](resources/datasets/generated/requests_seed42.csv) |
+| 3.1 | Модуль 3. Теория игр | O-2 | O-2.1 | С | Обосновывает архитектурный выбор через стратегическое взаимодействие | Т | [КИМ-3.1](M3-game-theory/kim-01-practical-work.md), [КИМ-3.2](M3-game-theory/kim-02-test.md) | [исполняемый пример](examples/m3_coordination_game.py), [задачи](resources/problem-banks/README.md) |
+| 3.2 | Модуль 3. Теория игр | O-2 | O-2.4 | С | Оценивает результативность и устойчивость стратегий | Т | [КИМ-3.1](M3-game-theory/kim-01-practical-work.md), [КИМ-3.2](M3-game-theory/kim-02-test.md) | [исполняемый пример](examples/m3_coordination_game.py), [бенчмарки](resources/benchmarks/README.md) |
+| 4.1 | Модуль 4. Роевой интеллект | O-2 | O-2.2, O-2.4 | С | Применяет PSO/ACO и сопоставляет качество с базовым методом | Т | [КИМ-4.1](M4-swarm-intelligence/kim-01-practical-work.md), [КИМ-4.2](M4-swarm-intelligence/kim-02-test.md) | [пример PSO](examples/m4_pso.py), [бенчмарки](resources/benchmarks/README.md) |
+| 4.2 | Модуль 4. Исследовательская записка | FC-3 | FC-3.3 | Б | Находит актуальное исследование, отделяет источник от собственного вывода | Т | [КИМ-4.3](M4-swarm-intelligence/kim-03-research-note.md) | [статьи](resources/papers/README.md) |
+| 5.1 | Модуль 5. MARL | ML-6 | ML-6.1 | С | Адаптирует обучение с подкреплением к кооперативной или конкурентной постановке | Т | [КИМ-5.1](M5-marl/kim-01-practical-work.md), [КИМ-5.2](M5-marl/kim-02-test.md) | [пример IQL](examples/m5_independent_q.py), [библиотеки](resources/software/python-libs/README.md) |
+| 5.2 | Модуль 5. MARL | ML-6 | ML-6.3 | С | Проверяет устойчивость, безопасность и отказный режим | Т | [КИМ-5.1](M5-marl/kim-01-practical-work.md), [КИМ-5.2](M5-marl/kim-02-test.md) | [бенчмарки](resources/benchmarks/README.md), [журнал](templates/student-repository/experiment-log.csv) |
+| 5.3 | Модуль 5. Исследовательская записка | FC-3 | FC-3.3 | Б | Сопоставляет результаты эксперимента с актуальными исследованиями | Т | [КИМ-5.3](M5-marl/kim-03-research-note.md) | [статьи](resources/papers/README.md) |
+| 6.1 | Модуль 6. LLM-агентные системы | LLM-4 | LLM-4.1 | Б | Собирает систему из готовых компонентов и разделяет модельный и ответственный контуры | Т | [КИМ-6.1](M6-llm-mas/kim-01-practical-work.md), [КИМ-6.2](M6-llm-mas/kim-02-test.md) | [защищённый оркестратор](examples/m6_guarded_orchestrator.py), [A2A/MCP slice](examples/m6_protocol_slice.py) |
+| 6.2 | Модуль 6. LLM-агентные системы | LLM-4 | LLM-4.3 | Б | Применяет и обосновывает агентные паттерны взаимодействия | Т | [КИМ-6.1](M6-llm-mas/kim-01-practical-work.md), [КИМ-6.2](M6-llm-mas/kim-02-test.md) | [оркестратор](examples/m6_guarded_orchestrator.py), [контрактные тесты](examples/m6_protocol_slice.py) |
+| 6.3 | Модуль 6. Исследовательская записка | FC-3 | FC-3.3 | Б | Готовит обзор и явно указывает границы переноса выводов | Т | [КИМ-6.3](M6-llm-mas/kim-03-research-note.md) | [статьи](resources/papers/README.md) |
+| 7.1 | Рубежный контроль 1 (модули 1–3) | O-2 | O-2.1, O-2.2, O-2.4 | С | Проверяет архитектурный выбор, координацию и стратегическое взаимодействие | Р | [контрольная](Midterm-1/kim-01-control-work.md), [кейс](Midterm-1/kim-02-analytical-case.md) | [банк задач](resources/problem-banks/README.md) |
+| 7.2 | Рубежный контроль 1 (модули 1–3) | O-2 | O-2.3 | Б | Проверяет координацию обученных агентов без повышения индикатора сверх целевого уровня | Р | [контрольная](Midterm-1/kim-01-control-work.md), [кейс](Midterm-1/kim-02-analytical-case.md) | [пример Contract Net](examples/m2_contract_net.py) |
+| 8.1 | Рубежный контроль 2 (модули 4–5) | O-2, ML-6 | O-2.2, O-2.4, ML-6.1, ML-6.3 | С | Проверяет метаэвристики, MARL, устойчивость и безопасность | Р | [контрольная](Midterm-2/kim-01-control-work.md), [кейс](Midterm-2/kim-02-analytical-case.md) | [примеры](examples/README.md), [журнал](templates/student-repository/experiment-log.csv) |
+| 8.2 | Рубежный контроль 2 (модули 4–5) | FC-3 | FC-3.3 | Б | Проверяет связь экспериментальных выводов с исследованиями и границы переноса | Р | [кейс](Midterm-2/kim-02-analytical-case.md) | [статьи](resources/papers/README.md) |
+| 9 | Промежуточная аттестация — экзамен | O-2, ML-6, LLM-4, FC-3 | все перечисленные выше | целевые | Теория и комплексное практическое задание с живой защитой | П | [билет](Exam/kim-01-theory.md), [практика](Exam/kim-02-practical-task.md) | [E2E smoke](examples/exam_end_to_end.py), [приёмочные проверки](Exam/acceptance-checklist.md), [шаблоны](templates/student-repository/README.md) |
 
-Дескрипторы приведены кратко; полные формулировки (знает / умеет / владеет) — в [разделе 4 РПД](docs/rpd.md#4-планируемые-результаты-обучения-дескрипторы-освоения-индикаторов-крм). Роли КРМ, обслуживаемые дисциплиной (ML Engineer — основная, MLOps, AI Architect), и требуемые уровни — в [data/role-competency-matrix.csv](data/role-competency-matrix.csv).
+Эта таблица служит навигационным представлением. Точные формулировки,
+уровни, evidence item, строки рубрик, минимальные условия и прямые ресурсы
+хранятся в [атомарной матрице](docs/indicator-evidence.md) и проверяются
+автоматически против КРМ. Полные дескрипторы (знает / умеет / владеет) — в
+[разделе 4 РПД](docs/rpd.md#4-планируемые-результаты-обучения-дескрипторы-освоения-индикаторов-крм).
+Роли КРМ, обслуживаемые дисциплиной (ML Engineer — основная, MLOps, AI
+Architect), и требуемые уровни — в
+[data/role-competency-matrix.csv](data/role-competency-matrix.csv).
 
 ## 3. Контрольно-измерительные материалы
 
@@ -106,6 +130,7 @@
 ├── CONTRIBUTING.md
 ├── docs/                     # РПД, чек-лист качества
 ├── data/                     # КРМ v3.0 и производные матрицы
+├── examples/                 # малоресурсные исполняемые примеры
 ├── M1-agent-architectures/   # КИМ модуля 1
 ├── M2-coordination/          # КИМ модуля 2
 ├── M3-game-theory/           # КИМ модуля 3
@@ -117,8 +142,12 @@
 ├── Exam/                     # промежуточная аттестация
 ├── methodical-guidelines/    # методические указания
 ├── resources/                # образовательные ресурсы
+├── templates/                # шаблон учебного репозитория и отчётных артефактов
+├── tests/                    # автоматические проверки примеров
 ├── team/                     # команда проекта
-└── other/                    # прочие материалы
+├── other/                    # прочие материалы и локальные проверки
+├── Dockerfile
+└── requirements.txt
 ```
 
 Подробное дерево — в файле [`repository-tree.txt`](repository-tree.txt).
