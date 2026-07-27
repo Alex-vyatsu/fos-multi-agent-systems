@@ -1,0 +1,11 @@
+[project]
+name = "fos-multi-agent-systems-examples"
+version = "1.2.0"
+description = "Малоресурсные демонстрационные примеры для ФОС по мультиагентным системам"
+readme = "examples/README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE-CODE.md" }
+authors = [
+  { name = "Команда № 53" },
+]
+dependencies = []

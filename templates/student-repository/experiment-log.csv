@@ -1,0 +1,2 @@
+run_id,timestamp,git_commit,config,seed,environment,result,status,observation
+example-001,YYYY-MM-DDThh:mm:ss,abcdef0,configs/baseline.json,42,Python 3.11,,,planned
