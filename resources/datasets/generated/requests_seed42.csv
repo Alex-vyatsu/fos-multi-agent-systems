@@ -1,0 +1,13 @@
+request_id,release_tick,priority,work_units,required_skill
+R001,2,1,1,compute
+R002,3,1,4,sensor
+R003,5,1,2,compute
+R004,6,1,1,sensor
+R005,6,1,1,compute
+R006,6,3,7,sensor
+R007,7,3,5,sensor
+R008,7,3,7,network
+R009,8,1,4,network
+R010,8,1,7,sensor
+R011,9,2,5,sensor
+R012,11,2,2,network
