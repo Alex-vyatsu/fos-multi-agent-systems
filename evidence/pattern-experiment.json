@@ -1,0 +1,273 @@
+{
+  "experiment_id": "defense-patterns-seeds-scale-recovery-v1",
+  "configurations": {
+    "seeds": [
+      7,
+      42,
+      99
+    ],
+    "patterns": [
+      "orchestrator",
+      "reviewed_pipeline"
+    ],
+    "scale_task_counts": [
+      4,
+      8,
+      12
+    ],
+    "profile": "minimal CPU-only deterministic protocol slice"
+  },
+  "comparison_runs": [
+    {
+      "seed": 7,
+      "pattern": "orchestrator",
+      "task_count": 8,
+      "message_count": 40,
+      "total_winning_cost": 28.105,
+      "trace_event_count": 4,
+      "latency_budget_ms": 8,
+      "external_cost_usd": 0.0,
+      "acceptance_passed": 5,
+      "acceptance_total": 5,
+      "passed": true
+    },
+    {
+      "seed": 42,
+      "pattern": "orchestrator",
+      "task_count": 8,
+      "message_count": 40,
+      "total_winning_cost": 20.114,
+      "trace_event_count": 4,
+      "latency_budget_ms": 8,
+      "external_cost_usd": 0.0,
+      "acceptance_passed": 5,
+      "acceptance_total": 5,
+      "passed": true
+    },
+    {
+      "seed": 99,
+      "pattern": "orchestrator",
+      "task_count": 8,
+      "message_count": 40,
+      "total_winning_cost": 27.18,
+      "trace_event_count": 4,
+      "latency_budget_ms": 8,
+      "external_cost_usd": 0.0,
+      "acceptance_passed": 5,
+      "acceptance_total": 5,
+      "passed": true
+    },
+    {
+      "seed": 7,
+      "pattern": "reviewed_pipeline",
+      "task_count": 8,
+      "message_count": 40,
+      "total_winning_cost": 28.105,
+      "trace_event_count": 7,
+      "latency_budget_ms": 14,
+      "external_cost_usd": 0.0,
+      "acceptance_passed": 5,
+      "acceptance_total": 5,
+      "passed": true
+    },
+    {
+      "seed": 42,
+      "pattern": "reviewed_pipeline",
+      "task_count": 8,
+      "message_count": 40,
+      "total_winning_cost": 20.114,
+      "trace_event_count": 7,
+      "latency_budget_ms": 14,
+      "external_cost_usd": 0.0,
+      "acceptance_passed": 5,
+      "acceptance_total": 5,
+      "passed": true
+    },
+    {
+      "seed": 99,
+      "pattern": "reviewed_pipeline",
+      "task_count": 8,
+      "message_count": 40,
+      "total_winning_cost": 27.18,
+      "trace_event_count": 7,
+      "latency_budget_ms": 14,
+      "external_cost_usd": 0.0,
+      "acceptance_passed": 5,
+      "acceptance_total": 5,
+      "passed": true
+    }
+  ],
+  "pattern_summary": {
+    "orchestrator": {
+      "runs": 3,
+      "pass_rate": 1,
+      "mean_total_winning_cost": 25.133,
+      "winning_cost_range": [
+        20.114,
+        28.105
+      ],
+      "mean_trace_event_count": 4,
+      "mean_latency_budget_ms": 8,
+      "external_cost_usd": 0.0
+    },
+    "reviewed_pipeline": {
+      "runs": 3,
+      "pass_rate": 1,
+      "mean_total_winning_cost": 25.133,
+      "winning_cost_range": [
+        20.114,
+        28.105
+      ],
+      "mean_trace_event_count": 7,
+      "mean_latency_budget_ms": 14,
+      "external_cost_usd": 0.0
+    }
+  },
+  "marl_comparison": {
+    "environment": "one-state cooperative two-agent coordination game",
+    "seeds": [
+      7,
+      42,
+      99
+    ],
+    "episodes": 2000,
+    "runs": [
+      {
+        "algorithm": "IQL",
+        "seed": 7,
+        "coordination_rate": 0.99,
+        "learned_actions": [
+          0,
+          0
+        ]
+      },
+      {
+        "algorithm": "VDN-style CTDE",
+        "seed": 7,
+        "coordination_rate": 0.98,
+        "learned_actions": [
+          0,
+          0
+        ]
+      },
+      {
+        "algorithm": "IQL",
+        "seed": 42,
+        "coordination_rate": 0.985,
+        "learned_actions": [
+          0,
+          0
+        ]
+      },
+      {
+        "algorithm": "VDN-style CTDE",
+        "seed": 42,
+        "coordination_rate": 0.985,
+        "learned_actions": [
+          0,
+          0
+        ]
+      },
+      {
+        "algorithm": "IQL",
+        "seed": 99,
+        "coordination_rate": 0.965,
+        "learned_actions": [
+          0,
+          0
+        ]
+      },
+      {
+        "algorithm": "VDN-style CTDE",
+        "seed": 99,
+        "coordination_rate": 1.0,
+        "learned_actions": [
+          0,
+          0
+        ]
+      }
+    ],
+    "summary": {
+      "IQL": {
+        "mean_coordination_rate": 0.98,
+        "range": [
+          0.965,
+          0.99
+        ],
+        "all_runs_coordinated": true
+      },
+      "VDN-style CTDE": {
+        "mean_coordination_rate": 0.988,
+        "range": [
+          0.98,
+          1.0
+        ],
+        "all_runs_coordinated": true
+      }
+    },
+    "passed": true,
+    "claim_boundary": "учебный tabular VDN-style baseline, не реализация промышленного QMIX/MADDPG и не доказательство переноса на другие среды"
+  },
+  "scale_runs": [
+    {
+      "seed": 42,
+      "pattern": "reviewed_pipeline",
+      "task_count": 4,
+      "message_count": 20,
+      "total_winning_cost": 8.036,
+      "trace_event_count": 7,
+      "latency_budget_ms": 14,
+      "external_cost_usd": 0.0,
+      "acceptance_passed": 5,
+      "acceptance_total": 5,
+      "passed": true
+    },
+    {
+      "seed": 42,
+      "pattern": "reviewed_pipeline",
+      "task_count": 8,
+      "message_count": 40,
+      "total_winning_cost": 20.114,
+      "trace_event_count": 7,
+      "latency_budget_ms": 14,
+      "external_cost_usd": 0.0,
+      "acceptance_passed": 5,
+      "acceptance_total": 5,
+      "passed": true
+    },
+    {
+      "seed": 42,
+      "pattern": "reviewed_pipeline",
+      "task_count": 12,
+      "message_count": 60,
+      "total_winning_cost": 30.219,
+      "trace_event_count": 7,
+      "latency_budget_ms": 14,
+      "external_cost_usd": 0.0,
+      "acceptance_passed": 5,
+      "acceptance_total": 5,
+      "passed": true
+    }
+  ],
+  "local_change": {
+    "change": "tool_available: true → false → recovery true",
+    "protocol_state": "failed",
+    "recovery_state": "completed",
+    "trace_event_count": 10
+  },
+  "decision": {
+    "low_risk": "orchestrator",
+    "high_risk": "reviewed_pipeline",
+    "reason": "reviewed_pipeline сохраняет те же hard gates и добавляет независимую проверку ценой дополнительных событий и latency budget"
+  },
+  "hard_gates": {
+    "all_comparison_runs_pass": true,
+    "all_scale_runs_pass": true,
+    "failure_detected": true,
+    "recovery_completed": true,
+    "no_external_api_cost": true,
+    "marl_iql_vdn_comparison_passed": true
+  },
+  "passed": true,
+  "claim_boundary": "результат относится к детерминированному semantic contract slice; качество реальной LLM и wire-conformance не проверялись"
+}

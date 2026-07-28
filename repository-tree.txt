@@ -90,18 +90,28 @@
 │   ├── clean-run-2026-07-27.md
 │   ├── evaluation-2026-07-27.md
 │   ├── indicator-evidence.md
+│   ├── itmo-defense-evaluation-2026-07-27.md
 │   ├── README.md
 │   ├── quality-checklist.md
 │   ├── resource-profiles.md
 │   └── rpd.md
+├── evidence/
+│   ├── architecture-decision.md
+│   ├── defense-run-seed42.json
+│   ├── defense-runbook.md
+│   ├── defense-trace-seed42.jsonl
+│   ├── pattern-experiment.json
+│   └── README.md
 ├── examples/
 │   ├── README.md
 │   ├── __init__.py
+│   ├── defense_experiment.py
 │   ├── exam_end_to_end.py
 │   ├── m1_reactive_agents.py
 │   ├── m2_contract_net.py
 │   ├── m3_coordination_game.py
 │   ├── m4_pso.py
+│   ├── m5_ctde_comparison.py
 │   ├── m5_independent_q.py
 │   ├── m6_guarded_orchestrator.py
 │   └── m6_protocol_slice.py
@@ -116,6 +126,7 @@
 ├── other/
 │   ├── tools/
 │   │   ├── check_all.py
+│   │   ├── check_evidence.py
 │   │   ├── check_links.py
 │   │   ├── check_structure.py
 │   │   ├── check_traceability.py

@@ -1,0 +1,146 @@
+{
+  "seed": 42,
+  "pattern": "reviewed_pipeline",
+  "dataset_rows": 12,
+  "allocation": {
+    "task_count": 8,
+    "message_count": 40,
+    "total_winning_cost": 20.114,
+    "mean_winning_cost": 2.514
+  },
+  "protocol_state": "completed",
+  "review_state": "completed",
+  "recovery_state": "not_needed",
+  "observability": {
+    "trace": [
+      {
+        "trace_schema_version": "1.0",
+        "interaction_id": "exam-42-attempt-1",
+        "sequence": 1,
+        "boundary": "A2A",
+        "event": "task_submitted",
+        "task_id": "task-001",
+        "latency_ms": 2,
+        "external_cost_usd": 0.0,
+        "parent_task_id": null,
+        "agent_id": "request-analyst",
+        "agent_owner": "analytics-team",
+        "capability": "summarize_requests",
+        "version": "1.0.0"
+      },
+      {
+        "trace_schema_version": "1.0",
+        "interaction_id": "exam-42-attempt-1",
+        "sequence": 2,
+        "boundary": "A2A",
+        "event": "task_working",
+        "task_id": "task-001",
+        "latency_ms": 1,
+        "external_cost_usd": 0.0,
+        "agent_id": "request-analyst"
+      },
+      {
+        "trace_schema_version": "1.0",
+        "interaction_id": "exam-42-attempt-1",
+        "sequence": 3,
+        "boundary": "MCP",
+        "event": "tool_completed",
+        "task_id": "task-001",
+        "latency_ms": 4,
+        "external_cost_usd": 0.0,
+        "version": "2025-11-25",
+        "effect_key": "task-001:lookup",
+        "tool_call_id": "tool-task-001-lookup",
+        "tool_name": "lookup_requests",
+        "tool_version": "request-catalog-1.0",
+        "data_version": "requests-demo-1.0",
+        "policy_version": "defense-policy-1.0",
+        "policy_decision_id": "allow-task-001-read",
+        "agent_id": "request-analyst",
+        "artifact_id": "artifact-task-001"
+      },
+      {
+        "trace_schema_version": "1.0",
+        "interaction_id": "exam-42-attempt-1",
+        "sequence": 4,
+        "boundary": "A2A",
+        "event": "artifact_published",
+        "task_id": "task-001",
+        "latency_ms": 1,
+        "external_cost_usd": 0.0,
+        "artifact_id": "artifact-task-001",
+        "agent_id": "request-analyst"
+      },
+      {
+        "trace_schema_version": "1.0",
+        "interaction_id": "exam-42-attempt-1",
+        "sequence": 5,
+        "boundary": "A2A",
+        "event": "task_submitted",
+        "task_id": "task-002",
+        "latency_ms": 2,
+        "external_cost_usd": 0.0,
+        "parent_task_id": "task-001",
+        "agent_id": "quality-reviewer",
+        "agent_owner": "quality-team",
+        "capability": "review_summary",
+        "version": "1.0.0"
+      },
+      {
+        "trace_schema_version": "1.0",
+        "interaction_id": "exam-42-attempt-1",
+        "sequence": 6,
+        "boundary": "A2A",
+        "event": "task_working",
+        "task_id": "task-002",
+        "latency_ms": 1,
+        "external_cost_usd": 0.0,
+        "agent_id": "quality-reviewer"
+      },
+      {
+        "trace_schema_version": "1.0",
+        "interaction_id": "exam-42-attempt-1",
+        "sequence": 7,
+        "boundary": "A2A",
+        "event": "review_completed",
+        "task_id": "task-002",
+        "latency_ms": 3,
+        "external_cost_usd": 0.0,
+        "parent_task_id": "task-001",
+        "agent_id": "quality-reviewer",
+        "source_artifact_id": "artifact-task-001",
+        "artifact_id": "review-task-002",
+        "policy_version": "defense-policy-1.0",
+        "policy_decision_id": "review-task-002",
+        "approved": true
+      }
+    ],
+    "metrics": {
+      "event_count": 7,
+      "a2a_event_count": 6,
+      "mcp_event_count": 1,
+      "model_event_count": 0,
+      "policy_event_count": 0,
+      "latency_budget_ms": 14,
+      "external_cost_usd": 0.0,
+      "error_count": 0
+    },
+    "versions": {
+      "trace_schema": "1.0",
+      "policy": "defense-policy-1.0",
+      "tool": "request-catalog-1.0",
+      "data": "requests-demo-1.0",
+      "model": "deterministic-no-llm"
+    },
+    "metric_boundary": "latency_ms — детерминированный учебный budget; реальное время фиксируется clean run"
+  },
+  "approval_state": "awaiting_human_decision",
+  "acceptance": {
+    "functional": true,
+    "reproducible": true,
+    "observable": true,
+    "fault_safe": true,
+    "responsible": true
+  },
+  "passed": true
+}

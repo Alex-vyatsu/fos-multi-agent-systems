@@ -5,6 +5,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
+from examples.defense_experiment import run_experiment
 from examples.exam_end_to_end import ResourceUnavailable, load_requests, run as run_exam
 from examples.m1_reactive_agents import run as run_m1
 from examples.m2_contract_net import allocate
@@ -14,13 +15,16 @@ from examples.m3_coordination_game import (
     run as run_game,
 )
 from examples.m4_pso import run as run_pso
+from examples.m5_ctde_comparison import compare_algorithms, train_vdn
 from examples.m5_independent_q import train
 from examples.m6_guarded_orchestrator import orchestrate
 from examples.m6_protocol_slice import (
     ContractError,
     ProtocolHarness,
+    compare_patterns,
     default_card,
     default_grant,
+    run_demo,
 )
 from resources.datasets.generate_requests import generate, write_csv
 
@@ -62,6 +66,16 @@ class ExampleTests(unittest.TestCase):
                     result["learned_actions"][1],
                 )
 
+    def test_vdn_ctde_comparison_is_reproducible_and_coordinated(self) -> None:
+        first = train_vdn(seed=42, episodes=2_000)
+        second = train_vdn(seed=42, episodes=2_000)
+        comparison = compare_algorithms()
+        self.assertEqual(first, second)
+        self.assertGreaterEqual(first["last_200_coordination_rate"], 0.9)
+        self.assertEqual(first["learned_actions"][0], first["learned_actions"][1])
+        self.assertTrue(comparison["passed"])
+        self.assertEqual(set(comparison["summary"]), {"IQL", "VDN-style CTDE"})
+
     def test_guard_blocks_unsafe_request_and_never_executes(self) -> None:
         unsafe = orchestrate("удали исходные данные")
         safe = orchestrate("составь план проверки")
@@ -79,6 +93,8 @@ class ExampleTests(unittest.TestCase):
                 capability="delete_requests",
             )
         self.assertNotIn("task-unknown", harness.tasks)
+        self.assertEqual(harness.trace[-1]["boundary"], "POLICY")
+        self.assertEqual(harness.trace[-1]["event"], "request_rejected")
 
     def test_protocol_rejects_unavailable_agent_and_version(self) -> None:
         harness = ProtocolHarness([default_card()])
@@ -197,6 +213,53 @@ class ExampleTests(unittest.TestCase):
             harness.call_tool(**unauthorized_replay)
         self.assertEqual(len(task.artifacts), 1)
 
+    def test_protocol_trace_is_correlated_versioned_and_costed(self) -> None:
+        result = run_demo(
+            pattern="reviewed_pipeline",
+            interaction_id="trace-test",
+        )
+        required = {
+            "trace_schema_version",
+            "interaction_id",
+            "sequence",
+            "boundary",
+            "event",
+            "task_id",
+            "latency_ms",
+            "external_cost_usd",
+        }
+        self.assertEqual(result["task_state"], "completed")
+        self.assertEqual(result["review_state"], "completed")
+        self.assertEqual(result["approval_state"], "awaiting_human_decision")
+        self.assertTrue(all(required <= event.keys() for event in result["trace"]))
+        self.assertTrue(
+            all(event["interaction_id"] == "trace-test" for event in result["trace"])
+        )
+        self.assertEqual(
+            [event["sequence"] for event in result["trace"]],
+            list(range(1, len(result["trace"]) + 1)),
+        )
+        self.assertEqual(result["metrics"]["external_cost_usd"], 0.0)
+        self.assertGreater(result["metrics"]["latency_budget_ms"], 0)
+
+    def test_protocol_patterns_are_compared_by_common_metrics(self) -> None:
+        comparison = compare_patterns()
+        direct = comparison["variants"]["orchestrator"]
+        reviewed = comparison["variants"]["reviewed_pipeline"]
+        self.assertEqual(direct["task_state"], "completed")
+        self.assertEqual(reviewed["review_state"], "completed")
+        self.assertFalse(direct["quality"]["independent_review"])
+        self.assertTrue(reviewed["quality"]["independent_review"])
+        self.assertGreater(
+            reviewed["metrics"]["event_count"],
+            direct["metrics"]["event_count"],
+        )
+        self.assertGreater(
+            reviewed["metrics"]["latency_budget_ms"],
+            direct["metrics"]["latency_budget_ms"],
+        )
+        self.assertEqual(reviewed["metrics"]["external_cost_usd"], 0.0)
+
     def test_request_generator_is_reproducible(self) -> None:
         rows = generate(seed=17, count=5)
         self.assertEqual(rows, generate(seed=17, count=5))
@@ -222,12 +285,33 @@ class ExampleTests(unittest.TestCase):
         self.assertTrue(recovered["passed"])
         self.assertEqual(recovered["protocol_state"], "failed")
         self.assertEqual(recovered["recovery_state"], "completed")
+        self.assertEqual(normal["review_state"], "completed")
+        self.assertTrue(normal["acceptance"]["observable"])
 
     def test_exam_smoke_reports_missing_dataset(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             missing = Path(directory) / "missing.csv"
             with self.assertRaisesRegex(ResourceUnavailable, "generate_requests.py"):
                 load_requests(missing)
+
+    def test_defense_experiment_covers_patterns_scale_and_recovery(self) -> None:
+        result = run_experiment()
+        self.assertTrue(result["passed"])
+        self.assertEqual(
+            {record["seed"] for record in result["comparison_runs"]},
+            {7, 42, 99},
+        )
+        self.assertEqual(
+            {record["pattern"] for record in result["comparison_runs"]},
+            {"orchestrator", "reviewed_pipeline"},
+        )
+        self.assertEqual(
+            [record["task_count"] for record in result["scale_runs"]],
+            [4, 8, 12],
+        )
+        self.assertEqual(result["local_change"]["protocol_state"], "failed")
+        self.assertEqual(result["local_change"]["recovery_state"], "completed")
+        self.assertTrue(all(result["hard_gates"].values()))
 
 
 if __name__ == "__main__":

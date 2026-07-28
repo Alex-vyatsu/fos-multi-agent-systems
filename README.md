@@ -14,10 +14,12 @@
 - [Исходные данные КРМ](data/README.md)
 - [Атомарная трассировка индикаторов](docs/indicator-evidence.md)
 - [Минимальные воспроизводимые примеры](examples/README.md)
+- [Доказательства предзащитной готовности](evidence/README.md)
 - [Профили ресурсов](docs/resource-profiles.md)
 - [Шаблон учебного репозитория](templates/student-repository/README.md)
 - [Роли сопровождения и release gate](team/ownership.md)
 - [Оценка репозитория по чек-листу](docs/evaluation-2026-07-27.md)
+- [Оценка готовности к защите по критериям ИТМО](docs/itmo-defense-evaluation-2026-07-27.md)
 
 ## 1. О дисциплине
 
@@ -61,11 +63,11 @@
 | 3.2 | Модуль 3. Теория игр | O-2 | O-2.4 | С | Оценивает результативность и устойчивость стратегий | Т | [КИМ-3.1](M3-game-theory/kim-01-practical-work.md), [КИМ-3.2](M3-game-theory/kim-02-test.md) | [исполняемый пример](examples/m3_coordination_game.py), [бенчмарки](resources/benchmarks/README.md) |
 | 4.1 | Модуль 4. Роевой интеллект | O-2 | O-2.2, O-2.4 | С | Применяет PSO/ACO и сопоставляет качество с базовым методом | Т | [КИМ-4.1](M4-swarm-intelligence/kim-01-practical-work.md), [КИМ-4.2](M4-swarm-intelligence/kim-02-test.md) | [пример PSO](examples/m4_pso.py), [бенчмарки](resources/benchmarks/README.md) |
 | 4.2 | Модуль 4. Исследовательская записка | FC-3 | FC-3.3 | Б | Находит актуальное исследование, отделяет источник от собственного вывода | Т | [КИМ-4.3](M4-swarm-intelligence/kim-03-research-note.md) | [статьи](resources/papers/README.md) |
-| 5.1 | Модуль 5. MARL | ML-6 | ML-6.1 | С | Адаптирует обучение с подкреплением к кооперативной или конкурентной постановке | Т | [КИМ-5.1](M5-marl/kim-01-practical-work.md), [КИМ-5.2](M5-marl/kim-02-test.md) | [пример IQL](examples/m5_independent_q.py), [библиотеки](resources/software/python-libs/README.md) |
+| 5.1 | Модуль 5. MARL | ML-6 | ML-6.1 | С | Адаптирует обучение с подкреплением к кооперативной или конкурентной постановке | Т | [КИМ-5.1](M5-marl/kim-01-practical-work.md), [КИМ-5.2](M5-marl/kim-02-test.md) | [IQL и VDN-style CTDE](examples/m5_ctde_comparison.py), [библиотеки](resources/software/python-libs/README.md) |
 | 5.2 | Модуль 5. MARL | ML-6 | ML-6.3 | С | Проверяет устойчивость, безопасность и отказный режим | Т | [КИМ-5.1](M5-marl/kim-01-practical-work.md), [КИМ-5.2](M5-marl/kim-02-test.md) | [бенчмарки](resources/benchmarks/README.md), [журнал](templates/student-repository/experiment-log.csv) |
 | 5.3 | Модуль 5. Исследовательская записка | FC-3 | FC-3.3 | Б | Сопоставляет результаты эксперимента с актуальными исследованиями | Т | [КИМ-5.3](M5-marl/kim-03-research-note.md) | [статьи](resources/papers/README.md) |
 | 6.1 | Модуль 6. LLM-агентные системы | LLM-4 | LLM-4.1 | Б | Собирает систему из готовых компонентов и разделяет модельный и ответственный контуры | Т | [КИМ-6.1](M6-llm-mas/kim-01-practical-work.md), [КИМ-6.2](M6-llm-mas/kim-02-test.md) | [защищённый оркестратор](examples/m6_guarded_orchestrator.py), [A2A/MCP slice](examples/m6_protocol_slice.py) |
-| 6.2 | Модуль 6. LLM-агентные системы | LLM-4 | LLM-4.3 | Б | Применяет и обосновывает агентные паттерны взаимодействия | Т | [КИМ-6.1](M6-llm-mas/kim-01-practical-work.md), [КИМ-6.2](M6-llm-mas/kim-02-test.md) | [оркестратор](examples/m6_guarded_orchestrator.py), [контрактные тесты](examples/m6_protocol_slice.py) |
+| 6.2 | Модуль 6. LLM-агентные системы | LLM-4 | LLM-4.3 | Б | Применяет и обосновывает агентные паттерны взаимодействия | Т | [КИМ-6.1](M6-llm-mas/kim-01-practical-work.md), [КИМ-6.2](M6-llm-mas/kim-02-test.md) | [сравнение паттернов](examples/defense_experiment.py), [контрактные тесты](examples/m6_protocol_slice.py) |
 | 6.3 | Модуль 6. Исследовательская записка | FC-3 | FC-3.3 | Б | Готовит обзор и явно указывает границы переноса выводов | Т | [КИМ-6.3](M6-llm-mas/kim-03-research-note.md) | [статьи](resources/papers/README.md) |
 | 7.1 | Рубежный контроль 1 (модули 1–3) | O-2 | O-2.1, O-2.2, O-2.4 | С | Проверяет архитектурный выбор, координацию и стратегическое взаимодействие | Р | [контрольная](Midterm-1/kim-01-control-work.md), [кейс](Midterm-1/kim-02-analytical-case.md) | [банк задач](resources/problem-banks/README.md) |
 | 7.2 | Рубежный контроль 1 (модули 1–3) | O-2 | O-2.3 | Б | Проверяет координацию обученных агентов без повышения индикатора сверх целевого уровня | Р | [контрольная](Midterm-1/kim-01-control-work.md), [кейс](Midterm-1/kim-02-analytical-case.md) | [пример Contract Net](examples/m2_contract_net.py) |
@@ -128,6 +130,7 @@ Architect), и требуемые уровни — в
 ├── CONTRIBUTING.md
 ├── docs/                     # РПД, чек-лист качества
 ├── data/                     # КРМ v3.0 и производные матрицы
+├── evidence/                 # воспроизводимые доказательства предзащитной готовности
 ├── examples/                 # малоресурсные исполняемые примеры
 ├── M1-agent-architectures/   # КИМ модуля 1
 ├── M2-coordination/          # КИМ модуля 2
