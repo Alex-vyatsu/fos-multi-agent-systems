@@ -7,8 +7,12 @@
 ## Быстрая навигация
 
 - [Рабочая программа дисциплины](docs/rpd.md)
+- [Паспорт ФОС](docs/pasport.md)
+- [Матрицы КРМ и ОС](docs/matrix.md)
+- [Обоснование ролей КРМ](docs/roles_scope.md)
 - [Методические указания](methodical-guidelines/README.md)
 - [Информационные ресурсы](resources/README.md)
+- [Модельные кейсы](resources/cases/README.md)
 - [Команда проекта](team/README.md)
 - [Контроль качества репозитория](docs/quality-checklist.md)
 - [Исходные данные КРМ](data/README.md)
@@ -18,6 +22,7 @@
 - [Шаблон учебного репозитория](templates/student-repository/README.md)
 - [Роли сопровождения и release gate](team/ownership.md)
 - [Оценка репозитория по чек-листу](docs/evaluation-2026-07-27.md)
+- [Проверка внешних URL](docs/link-check-2026-08-06.md)
 
 ## 1. О дисциплине
 
@@ -168,4 +173,4 @@ Architect), и требуемые уровни — в
 
 ## 9. Лицензия
 
-Материалы распространяются на условиях **Creative Commons Attribution 4.0 International (CC BY 4.0)**. См. файл [LICENSE.md](LICENSE.md).
+Материалы распространяются на условиях **Creative Commons Attribution 4.0 International (CC BY 4.0)**. См. [LICENSE.md](LICENSE.md) и полный текст [`LICENSE-CC-BY-4.0.txt`](LICENSE-CC-BY-4.0.txt). Программный код — [MIT](LICENSE-CODE.md).
