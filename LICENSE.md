@@ -18,11 +18,18 @@
 
 ## Полный текст лицензии
 
-Полный юридический текст лицензии доступен по адресу:
+Полный юридический текст **Creative Commons Attribution 4.0 International**
+включён в репозиторий для автоматического определения лицензии и офлайн-доступа:
+
+- [`LICENSE-CC-BY-4.0.txt`](LICENSE-CC-BY-4.0.txt) — официальный legal code (EN).
+
+Онлайн-копии:
 <https://creativecommons.org/licenses/by/4.0/legalcode.ru> (русская версия) и
 <https://creativecommons.org/licenses/by/4.0/legalcode> (английская версия).
 
 Краткое изложение условий (Commons Deed): <https://creativecommons.org/licenses/by/4.0/deed.ru>.
+
+SPDX-идентификатор учебных материалов: `CC-BY-4.0`.
 
 ## Примечание о программном коде
 

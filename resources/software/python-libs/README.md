@@ -6,39 +6,39 @@
 
 | Название | Аннотация | Связанные КИМ | Доступ | Лицензия / условия | Дата проверки |
 |---|---|---|---|---|---|
-| **Python 3** | Основной язык курса; версия фиксируется на семестр (не ниже поддерживаемой используемыми библиотеками) | все ЛР | <https://www.python.org/> | PSF License | 2026-07-21 |
-| **NumPy** | Численные вычисления, работа с матрицами выигрышей и наблюдениями агентов | [КИМ-3.1](../../../M3-game-theory/kim-01-practical-work.md), [КИМ-4.1](../../../M4-swarm-intelligence/kim-01-practical-work.md), [КИМ-5.1](../../../M5-marl/kim-01-practical-work.md) | <https://numpy.org/> | BSD-3-Clause | 2026-07-21 |
-| **NetworkX** | Графы сред, топологии связей, алгоритмы поиска путей; генерация тестовых графов | [КИМ-1.1](../../../M1-agent-architectures/kim-01-practical-work.md), [КИМ-4.1](../../../M4-swarm-intelligence/kim-01-practical-work.md) | <https://networkx.org/> | BSD-3-Clause | 2026-07-21 |
-| **Matplotlib** | Визуализация траекторий агентов, кривых обучения и метрик | все ЛР | <https://matplotlib.org/> | PSF-based (Matplotlib License) | 2026-07-21 |
-| **Git** (+ **DVC** при работе с данными) | Контроль версий кода, конфигураций и экспериментов; история коммитов — доказательство хода работы при оценивании | все КИМ | <https://git-scm.com/>, <https://dvc.org/> | GPL-2.0 (Git), Apache-2.0 (DVC) | 2026-07-21 |
-| **Docker / Compose** | Контейнеризация окружения, воспроизводимый повторный запуск на защите | [КИМ-Э.2](../../../Exam/kim-02-practical-task.md) | <https://www.docker.com/> | Apache-2.0 (Docker Engine) | 2026-07-21 |
+| **Python 3** | Основной язык курса; версия фиксируется на семестр (не ниже поддерживаемой используемыми библиотеками) | все ЛР | <https://www.python.org/> | PSF License | 2026-08-06 |
+| **NumPy** | Численные вычисления, работа с матрицами выигрышей и наблюдениями агентов | [КИМ-3.1](../../../M3-game-theory/kim-01-practical-work.md), [КИМ-4.1](../../../M4-swarm-intelligence/kim-01-practical-work.md), [КИМ-5.1](../../../M5-marl/kim-01-practical-work.md) | <https://numpy.org/> | BSD-3-Clause | 2026-08-06 |
+| **NetworkX** | Графы сред, топологии связей, алгоритмы поиска путей; генерация тестовых графов | [КИМ-1.1](../../../M1-agent-architectures/kim-01-practical-work.md), [КИМ-4.1](../../../M4-swarm-intelligence/kim-01-practical-work.md) | <https://networkx.org/> | BSD-3-Clause | 2026-08-06 |
+| **Matplotlib** | Визуализация траекторий агентов, кривых обучения и метрик | все ЛР | <https://matplotlib.org/> | PSF-based (Matplotlib License) | 2026-08-06 |
+| **Git** (+ **DVC** при работе с данными) | Контроль версий кода, конфигураций и экспериментов; история коммитов — доказательство хода работы при оценивании | все КИМ | <https://git-scm.com/>, <https://dvc.org/> | GPL-2.0 (Git), Apache-2.0 (DVC) | 2026-08-06 |
+| **Docker / Compose** | Контейнеризация окружения, воспроизводимый повторный запуск на защите | [КИМ-Э.2](../../../Exam/kim-02-practical-task.md) | <https://www.docker.com/> | Apache-2.0 (Docker Engine) | 2026-08-06 |
 
 ## Модули 1–3: агенты, координация, теория игр
 
 | Название | Аннотация | Связанные КИМ | Доступ | Лицензия / условия | Дата проверки |
 |---|---|---|---|---|---|
-| **SPADE** | Фреймворк агентов с обменом сообщениями в духе FIPA; удобен для демонстрации протоколов взаимодействия и Contract Net | [КИМ-1.1](../../../M1-agent-architectures/kim-01-practical-work.md), [КИМ-2.1](../../../M2-coordination/kim-01-practical-work.md) | <https://spade-mas.readthedocs.io/> | MIT | 2026-07-21 |
-| **Mesa** | Библиотека агентного моделирования: планировщик шагов, сбор данных, визуализация; альтернатива SPADE для моделей самоорганизации | [КИМ-1.1](../../../M1-agent-architectures/kim-01-practical-work.md), [КИМ-4.1](../../../M4-swarm-intelligence/kim-01-practical-work.md) | <https://mesa.readthedocs.io/> | Apache-2.0 | 2026-07-21 |
-| **Nashpy** | Поиск равновесий в матричных играх двух игроков; используется для проверки расчётов в ЛР 3.1 | [КИМ-3.1](../../../M3-game-theory/kim-01-practical-work.md) | <https://nashpy.readthedocs.io/> | MIT | 2026-07-21 |
-| **Axelrod** | Библиотека турниров повторяющейся дилеммы заключённого с набором классических стратегий | [КИМ-3.1](../../../M3-game-theory/kim-01-practical-work.md) | <https://axelrod.readthedocs.io/> | MIT | 2026-07-21 |
+| **SPADE** | Фреймворк агентов с обменом сообщениями в духе FIPA; удобен для демонстрации протоколов взаимодействия и Contract Net | [КИМ-1.1](../../../M1-agent-architectures/kim-01-practical-work.md), [КИМ-2.1](../../../M2-coordination/kim-01-practical-work.md) | <https://spade-mas.readthedocs.io/> | MIT | 2026-08-06 |
+| **Mesa** | Библиотека агентного моделирования: планировщик шагов, сбор данных, визуализация; альтернатива SPADE для моделей самоорганизации | [КИМ-1.1](../../../M1-agent-architectures/kim-01-practical-work.md), [КИМ-4.1](../../../M4-swarm-intelligence/kim-01-practical-work.md) | <https://mesa.readthedocs.io/> | Apache-2.0 | 2026-08-06 |
+| **Nashpy** | Поиск равновесий в матричных играх двух игроков; используется для проверки расчётов в ЛР 3.1 | [КИМ-3.1](../../../M3-game-theory/kim-01-practical-work.md) | <https://nashpy.readthedocs.io/> | MIT | 2026-08-06 |
+| **Axelrod** | Библиотека турниров повторяющейся дилеммы заключённого с набором классических стратегий | [КИМ-3.1](../../../M3-game-theory/kim-01-practical-work.md) | <https://axelrod.readthedocs.io/> | MIT | 2026-08-06 |
 
 ## Модули 4–5: метаэвристики и MARL
 
 | Название | Аннотация | Связанные КИМ | Доступ | Лицензия / условия | Дата проверки |
 |---|---|---|---|---|---|
-| **PySwarms** | Реализации PSO с настраиваемыми параметрами и инструментами визуализации сходимости | [КИМ-4.1](../../../M4-swarm-intelligence/kim-01-practical-work.md) | <https://pyswarms.readthedocs.io/> | MIT | 2026-07-21 |
-| **Gymnasium** | Стандартный интерфейс сред RL; база для одноагентных бейзлайнов | [КИМ-5.1](../../../M5-marl/kim-01-practical-work.md) | <https://gymnasium.farama.org/> | MIT | 2026-07-21 |
-| **PettingZoo** | Стандартный API мультиагентных сред (AEC и параллельный режимы); основная площадка ЛР 5.1 | [КИМ-5.1](../../../M5-marl/kim-01-practical-work.md), [КИМ-Э.2](../../../Exam/kim-02-practical-task.md) | <https://pettingzoo.farama.org/> | MIT | 2026-07-21 |
-| **Ray RLlib** | Библиотека алгоритмов RL и MARL (в том числе многоагентные обёртки, PPO, QMIX-подобные схемы); используется для сравнения IQL и CTDE | [КИМ-5.1](../../../M5-marl/kim-01-practical-work.md), [КИМ-РК2.2](../../../Midterm-2/kim-02-analytical-case.md) | <https://docs.ray.io/en/latest/rllib/> | Apache-2.0 | 2026-07-21 |
+| **PySwarms** | Реализации PSO с настраиваемыми параметрами и инструментами визуализации сходимости | [КИМ-4.1](../../../M4-swarm-intelligence/kim-01-practical-work.md) | <https://pyswarms.readthedocs.io/> | MIT | 2026-08-06 |
+| **Gymnasium** | Стандартный интерфейс сред RL; база для одноагентных бейзлайнов | [КИМ-5.1](../../../M5-marl/kim-01-practical-work.md) | <https://gymnasium.farama.org/> | MIT | 2026-08-06 |
+| **PettingZoo** | Стандартный API мультиагентных сред (AEC и параллельный режимы); основная площадка ЛР 5.1 | [КИМ-5.1](../../../M5-marl/kim-01-practical-work.md), [КИМ-Э.2](../../../Exam/kim-02-practical-task.md) | <https://pettingzoo.farama.org/> | MIT | 2026-08-06 |
+| **Ray RLlib** | Библиотека алгоритмов RL и MARL (в том числе многоагентные обёртки, PPO, QMIX-подобные схемы); используется для сравнения IQL и CTDE | [КИМ-5.1](../../../M5-marl/kim-01-practical-work.md), [КИМ-РК2.2](../../../Midterm-2/kim-02-analytical-case.md) | <https://docs.ray.io/en/latest/rllib/> | Apache-2.0 | 2026-08-06 |
 
 ## Модуль 6: мультиагентные LLM-системы
 
 | Название | Аннотация | Связанные КИМ | Доступ | Лицензия / условия | Дата проверки |
 |---|---|---|---|---|---|
-| **AutoGen** | Фреймворк мультиагентных диалогов: оркестратор, специализированные агенты, паттерн «критик» | [КИМ-6.1](../../../M6-llm-mas/kim-01-practical-work.md) | <https://github.com/microsoft/autogen> | MIT | 2026-07-21 |
-| **LangGraph** | Построение агентных графов с явными состояниями и переходами; удобен для реализации «планировщик–исполнитель» и точек подтверждения человеком | [КИМ-6.1](../../../M6-llm-mas/kim-01-practical-work.md) | <https://langchain-ai.github.io/langgraph/> | MIT | 2026-07-21 |
-| **MCP SDK** (Model Context Protocol) | Подключение инструментов и контекста к агентам по единому протоколу; используется при реализации инструментального контура | [КИМ-6.1](../../../M6-llm-mas/kim-01-practical-work.md) | <https://modelcontextprotocol.io/> | MIT | 2026-07-21 |
-| **OpenTelemetry** (+ Prometheus / Grafana) | Трассировка вызовов агентов и инструментов, мониторинг задержки, стоимости и ошибок — доказательная база для проверки «наблюдаемость» | [КИМ-6.1](../../../M6-llm-mas/kim-01-practical-work.md), [КИМ-Э.2](../../../Exam/kim-02-practical-task.md) | <https://opentelemetry.io/> | Apache-2.0 | 2026-07-21 |
+| **AutoGen** | Фреймворк мультиагентных диалогов: оркестратор, специализированные агенты, паттерн «критик» | [КИМ-6.1](../../../M6-llm-mas/kim-01-practical-work.md) | <https://github.com/microsoft/autogen> | MIT | 2026-08-06 |
+| **LangGraph** | Построение агентных графов с явными состояниями и переходами; удобен для реализации «планировщик–исполнитель» и точек подтверждения человеком | [КИМ-6.1](../../../M6-llm-mas/kim-01-practical-work.md) | <https://langchain-ai.github.io/langgraph/> | MIT | 2026-08-06 |
+| **MCP SDK** (Model Context Protocol) | Подключение инструментов и контекста к агентам по единому протоколу; используется при реализации инструментального контура | [КИМ-6.1](../../../M6-llm-mas/kim-01-practical-work.md) | <https://modelcontextprotocol.io/> | MIT | 2026-08-06 |
+| **OpenTelemetry** (+ Prometheus / Grafana) | Трассировка вызовов агентов и инструментов, мониторинг задержки, стоимости и ошибок — доказательная база для проверки «наблюдаемость» | [КИМ-6.1](../../../M6-llm-mas/kim-01-practical-work.md), [КИМ-Э.2](../../../Exam/kim-02-practical-task.md) | <https://opentelemetry.io/> | Apache-2.0 | 2026-08-06 |
 
 ## Требования к добавлению
 

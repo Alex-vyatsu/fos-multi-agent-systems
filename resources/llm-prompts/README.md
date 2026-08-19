@@ -6,11 +6,11 @@
 
 | Название | Аннотация | Связанные КИМ | Доступ | Лицензия / условия | Дата проверки |
 |---|---|---|---|---|---|
-| **Yandex AI Studio** | Необязательный облачный вариант рекомендуемого/расширенного профиля; не является единственным путём выполнения ЛР 6.1 | [КИМ-6.1](../../M6-llm-mas/kim-01-practical-work.md) | <https://yandex.cloud/ru/docs/ai-studio> | По условиям сервиса; тарификация по потреблению | 2026-07-21 |
-| **A2A Protocol 1.0.0** | Stable baseline для agent-to-agent task/message/artifact boundary; не используется как tool API | [КИМ-6.1](../../M6-llm-mas/kim-01-practical-work.md), [КИМ-Э.2](../../Exam/kim-02-practical-task.md) | <https://a2a-protocol.org/latest/specification/> | Открытая спецификация | 2026-07-27 |
-| **MCP 2025-11-25** | Stable baseline для tool/resource/context boundary; не считается agent-to-agent протоколом | [КИМ-6.1](../../M6-llm-mas/kim-01-practical-work.md), [КИМ-Э.2](../../Exam/kim-02-practical-task.md) | <https://modelcontextprotocol.io/specification/2025-11-25> | Открытая спецификация | 2026-07-27 |
-| **Локальные модели** (через совместимый API) | Рекомендуемый вариант при ограничениях доступа к облачным сервисам или при работе с закрытыми данными; exact model/version фиксируется в отчёте | [КИМ-6.1](../../M6-llm-mas/kim-01-practical-work.md), [КИМ-Э.2](../../Exam/kim-02-practical-task.md) | Инфраструктура кафедры | По лицензии выбранной модели | 2026-07-21 |
-| **ИИ-ассистенты разработчика** (GitHub Copilot и аналоги) | Помощь в написании и отладке кода; допускаются при указании промптов и критическом разборе результата | все ЛР, [КИМ-Э.2](../../Exam/kim-02-practical-task.md) | По подписке вуза / бесплатные планы | По условиям сервиса | 2026-07-21 |
+| **Yandex AI Studio** | Необязательный облачный вариант рекомендуемого/расширенного профиля; не является единственным путём выполнения ЛР 6.1 | [КИМ-6.1](../../M6-llm-mas/kim-01-practical-work.md) | <https://yandex.cloud/ru/docs/ai-studio> | По условиям сервиса; тарификация по потреблению | 2026-08-06 |
+| **A2A Protocol 1.0.0** | Stable baseline для agent-to-agent task/message/artifact boundary; не используется как tool API | [КИМ-6.1](../../M6-llm-mas/kim-01-practical-work.md), [КИМ-Э.2](../../Exam/kim-02-practical-task.md) | <https://a2a-protocol.org/latest/specification/> | Открытая спецификация | 2026-08-06 |
+| **MCP 2025-11-25** | Stable baseline для tool/resource/context boundary; не считается agent-to-agent протоколом | [КИМ-6.1](../../M6-llm-mas/kim-01-practical-work.md), [КИМ-Э.2](../../Exam/kim-02-practical-task.md) | <https://modelcontextprotocol.io/specification/2025-11-25> | Открытая спецификация | 2026-08-06 |
+| **Локальные модели** (через совместимый API) | Рекомендуемый вариант при ограничениях доступа к облачным сервисам или при работе с закрытыми данными; exact model/version фиксируется в отчёте | [КИМ-6.1](../../M6-llm-mas/kim-01-practical-work.md), [КИМ-Э.2](../../Exam/kim-02-practical-task.md) | Инфраструктура кафедры | По лицензии выбранной модели | 2026-08-06 |
+| **ИИ-ассистенты разработчика** (GitHub Copilot и аналоги) | Помощь в написании и отладке кода; допускаются при указании промптов и критическом разборе результата | все ЛР, [КИМ-Э.2](../../Exam/kim-02-practical-task.md) | По подписке вуза / бесплатные планы | По условиям сервиса | 2026-08-06 |
 
 ## Учебные шаблоны промптов
 
